@@ -1,0 +1,44 @@
+[
+    {
+        "photodate": 2017, 
+        "imageUrl": "img/photos/holiday-sri_lanka.jpg", 
+        "location": "Sri Lanka, 2017", 
+        "tags": "Sri Lanka holiday - on the beach, summer 2017"
+    }, 
+    {
+        "photodate": 2016, 
+        "imageUrl": "img/photos/holiday-sea.jpg", 
+        "location": "Black Sea, 2016", 
+        "tags": "Holiday at Black Sea - on the beach, summer 2016"
+    }, 
+    {
+        "photodate": 2015, 
+        "imageUrl": "img/photos/super-happy-familly.jpg", 
+        "location": "Black Sea, 2015", 
+        "tags": "Super Happy Familly"
+    }, 
+    {
+        "photodate": 2014, 
+        "imageUrl": "img/photos/the-most-super-happy-familly.jpg", 
+        "location": "Black Sea, 2014", 
+        "tags": "The most super happy familly"
+    }, 
+    {
+        "photodate": 2014, 
+        "imageUrl": "img/photos/family-taking-selfie.jpg", 
+        "location": "Back Home, happy family taking selfie, 2014", 
+        "tags": "Happy family, selfie "
+    }, 
+    {
+        "photodate": 2013, 
+        "imageUrl": "img/photos/grandfather-2013.jpg", 
+        "location": "Back Home, With Grandfather, 2013", 
+        "tags": "Super happy family with grandfather"
+    }, 
+    {
+        "photodate": 2012, 
+        "imageUrl": "img/photos/grandmother-2012.jpg", 
+        "location": "Back Home, with Grandmother, 2012", 
+        "tags": "Super happy family with grandmother"
+    }
+]

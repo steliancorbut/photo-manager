@@ -1,0 +1,14 @@
+{
+  "name": "photoapp",
+  "version": "1.0.0",
+  "description": "photoapp",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --config bs-config.js"
+  },
+  "author": "stelianc",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.12"
+  }
+}
