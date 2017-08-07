@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" >
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>Photo Manager</title>
+   <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+   
+   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+   <link rel="stylesheet" href="app.css" />
+
+   <script src="bower_components/angular/angular.js"></script>
+   
+   <script src="google-plus/angular-google-plus.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    var app = angular.module('app', ['googleplus']);
+
+    app.config(['GooglePlusProvider', function(GooglePlusProvider) {
+         GooglePlusProvider.init({
+         });
+    }]);
+
+    app.controller('AuthCtrl', ['$scope', 'GooglePlus', function ($scope, GooglePlus) {
+        $scope.userul = '';
+        $scope.login = function () {
+            GooglePlus.login().then(function (authResult) {
+                console.log(authResult);
+
+                GooglePlus.getUser().then(function (user) {
+                    console.log(user);
+                    $scope.userul = user.name;
+                });
+            }, function (err) {
+                console.log(err);
+            });
+        };
+    }]);
+    </script>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-pencil"></span> Photo Manager</a>
+      </div>
+      <!-- <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+      </ul> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-upload"></span> Upload</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <span class="glyphicon glyphicon-flag"></span> Language <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">English</a></li>
+            <li><a href="#">German</a></li>
+            <li><a href="#">Romanian</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div ng-app="app" ng-controller="AuthCtrl">
+    <a href="javascript:void(0);" ng-click="login()">Login with Google Plus</a>
+    <p>userul este: {{userul}}</p>
+  </div>  
+
+
+</body>
+</html>
