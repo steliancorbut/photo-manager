@@ -8,6 +8,8 @@
    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
    
    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+   <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
+
    <link rel="stylesheet" href="app.css" />
 
    <script src="bower_components/angular/angular.js"></script>
@@ -16,6 +18,9 @@
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <script>
     var app = angular.module('app', ['googleplus']);
@@ -76,11 +81,49 @@
     </div>
   </nav>
 
-  <div ng-app="app" ng-controller="AuthCtrl">
+  <!-- <div ng-app="app" ng-controller="AuthCtrl">
     <a href="javascript:void(0);" ng-click="login()">Login with Google Plus</a>
     <p>userul este: {{userul}}</p>
-  </div>  
+  </div>   -->
 
+      <div class="container" ng-app="app" ng-controller="AuthCtrl">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                            </fieldset>
+                        </form>
+                        <br>
+                        <p>or</p>
+                        <a href="javascript:void(0);" ng-click="login()" class="btn btn-block btn-social btn-google-plus">
+                                <i class="fa fa-google-plus"></i> Sign in with Google
+                        </a>
+                        <br>
+                        <p>and the user is: {{userul}}</p>   
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

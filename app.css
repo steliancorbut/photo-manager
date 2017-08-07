@@ -19,3 +19,7 @@ body {
   padding-bottom: 1em;
   width: 100px;
 }
+
+.login-panel {
+    margin-top: 25%;
+}
