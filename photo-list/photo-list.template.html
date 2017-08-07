@@ -1,22 +1,24 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2">
-      <!--Sidebar content-->
-
-      <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
-
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="location">Location</option>
-          <option value="photodate">Date</option>
+      
+      <!--Sidebar search -->
+      <div class="form-group input-group">
+        <input type="text" class="form-control" ng-model="$ctrl.query" placeholder="Search for..">
+          <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+          </span>
+      </div>
+      <div class="form-group">
+        <p class="help-block">Sort by:</p>
+        <select ng-model="$ctrl.orderProp" class="form-control">
+           <option value="location">Location</option>
+           <option value="photodate">Date</option>
         </select>
-      </p>
-
+      </div>
     </div>
+    <!-- End Sidebar search-->
+
     <div class="col-md-10">
       <!--Body content-->
 

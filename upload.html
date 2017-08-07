@@ -8,45 +8,19 @@
    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
    
    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-   <link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css" />
-
    <link rel="stylesheet" href="app.css" />
 
    <script src="bower_components/angular/angular.js"></script>
    
-   <script src="google-plus/angular-google-plus.js"></script>
+   <script src="app.module.js"></script>
+   <script src="photo-list/photo-list.module.js"></script>
+   <script src="photo-list/photo-list.component.js"></script>
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <!-- Custom Fonts -->
-    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script>
-    var app = angular.module('app', ['googleplus']);
-
-    app.config(['GooglePlusProvider', function(GooglePlusProvider) {
-         GooglePlusProvider.init({
-         });
-    }]);
-
-    app.controller('AuthCtrl', ['$scope', 'GooglePlus', function ($scope, GooglePlus) {
-        $scope.userul = '';
-        $scope.login = function () {
-            GooglePlus.login().then(function (authResult) {
-                console.log(authResult);
-
-                GooglePlus.getUser().then(function (user) {
-                    console.log(user);
-                    $scope.userul = user.name;
-                });
-            }, function (err) {
-                console.log(err);
-            });
-        };
-    }]);
-    </script>
-
+      <!-- Custom Fonts -->
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -81,49 +55,50 @@
     </div>
   </nav>
 
-  <!-- <div ng-app="app" ng-controller="AuthCtrl">
-    <a href="javascript:void(0);" ng-click="login()">Login with Google Plus</a>
-    <p>userul este: {{userul}}</p>
-  </div>   -->
-
-      <div class="container" ng-app="app" ng-controller="AuthCtrl">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+<div class="row">
+    <div class="col-lg-12">
+            
+        <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
+                        <h3 class="panel-title">Please pick a photo to upload</h3>
                     </div>
                     <div class="panel-body">
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input type="file" >
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="enter location" name="photolocation" type="text" value="" autofocus>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="enter date" name="photodate" type="text" value="">
                                 </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="enter tags" name="phototags" type="text" value="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="photodescription" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-lg btn-success btn-block">Submit Button</button>
+                                </div>
+                                <div class="form-group">
+                                    <button type="reset" class="btn btn-default">Reset Button</button>
+                                </div>
                             </fieldset>
-                        </form>
-                        <br>
-                        <p>or</p>
-                        <a href="javascript:void(0);" ng-click="login()" class="btn btn-block btn-social btn-google-plus">
-                                <i class="fa fa-google-plus"></i> Sign in with Google
-                        </a>
-                        <br>
-                        <p>and the user is: {{userul}}</p>   
-                        
+                        </form>                        
                     </div>
                 </div>
             </div>
-        </div>
     </div>
+</div>
+
+  <!-- <div ng-app="photoApp">     
+     <photo-list></photo-list> 
+  </div> -->
 
 </body>
 </html>
