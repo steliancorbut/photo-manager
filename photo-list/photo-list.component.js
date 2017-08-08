@@ -12,5 +12,11 @@ angular.
       $http.get('photos/photos.json').then(function(response) {
         self.photos = response.data;
       });
+
+      self.addReview = function(photo) {
+      photo.reviews.push(this.review);
+      this.review = {};
+      };
+
     }]
   });

@@ -20,15 +20,49 @@
     <!-- End Sidebar search-->
 
     <div class="col-md-10">
-      <!--Body content-->
-
+      <!-- Photo List -->
       <ul class="photos">
         <li ng-repeat="photo in $ctrl.photos | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
           <a href="{{photo.imageUrl}}" class="thumb">
             <img ng-src="{{photo.imageUrl}}" alt="{{photo.location}}" />
           </a>
-          <p>{{photo.location}}</p>
-          <p>{{photo.tags}}</p>
+          <p>PhotoId: {{photo.photoId}}</p>
+          <p>Location: {{photo.location}}</p>
+          <p>Tags:{{photo.tags}}</p>
+          <br>
+          <!--  Photo Reviews List -->
+          <p>Reviews:</p>
+          <ul class="photos">
+            <li ng-repeat="review in photo.reviews" >
+                <p>Stars: {{review.stars}} - 
+                Comment: {{review.body}} - 
+                Author: {{review.author}}</p>
+            </li>
+          </ul>
+          <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#rev{{photo.photoId}}">
+            <span class="glyphicon glyphicon-pencil"></span> Review it</button>
+          <div id="rev{{photo.photoId}}" class="collapse">
+            <!--  Review Form -->
+            <form name="reviewForm{{photo.photoId}}" ng-submit="$ctrl.addReview(photo)">
+              <h5>Submit a Review</h5>
+              <fieldset class="form-group">
+                <select ng-model="$ctrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+                  <option value>Rate the photo</option>
+                </select>
+              </fieldset>
+              <fieldset class="form-group">
+                <textarea ng-model="$ctrl.review.body" class="form-control" placeholder="Write a short review of the photo..." title="Review"></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <input ng-model="$ctrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+              </fieldset>
+              <fieldset class="form-group">
+                <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+              </fieldset>
+            </form>
+          </div>
+
+
         </li>
       </ul>
 
