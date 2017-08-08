@@ -7,12 +7,12 @@
         "tags": "Sri Lanka holiday - on the beach, summer 2012",
         "reviews": [{
         "stars": 3,
-        "body": "I think this photo was just OK, could honestly use more shine",
-        "author": "JimmyDean@example.org"
+        "body": "I think this photo is OK, could honestly use more shine.",
+        "author": "jimmydn@example.org"
             }, {
         "stars": 4,
         "body": "Any photo with sky and sea is for me!",
-        "author": "gemsRock@example.org"
+        "author": "john.rock@example.org"
       }]
     }, 
     {
@@ -24,11 +24,11 @@
         "reviews": [{
         "stars": 3,
         "body": "I think this photo was OK",
-        "author": "JimmyDean2@example.org"
+        "author": "john.dean2@example.org"
             }, {
         "stars": 4,
         "body": "Any photo with sky2 and sea2 is for me!",
-        "author": "gems2rock@example.org"
+        "author": "angela.pock@example.org"
       }]
     }, 
     {
@@ -46,12 +46,12 @@
         "tags": "The most super happy familly",
         "reviews": [{
         "stars": 5,
-        "body": "I think this photo was OK5",
-        "author": "JimmyDean2@example.org"
+        "body": "I think this photo was OK 5",
+        "author": "jimmydean2@example.org"
             }, {
         "stars": 4,
         "body": "Any photo with sky5 and sea5 is for me!",
-        "author": "gems2rock@example.org"
+        "author": "marius2ok@example.org"
       }]
     }, 
     {

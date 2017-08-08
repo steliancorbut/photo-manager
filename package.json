@@ -1,14 +1,19 @@
 {
   "name": "photoapp",
   "version": "1.0.0",
-  "description": "photoapp",
-  "main": "index.js",
-  "scripts": {
-    "start": "browser-sync start --config bs-config.js"
-  },
-  "author": "stelianc",
+  "description": "small photo manager - test",
+  "repository": "https://github.com/steliancorbut/photo-manager",
+  "author": "Stelian Corbut e-mail: stelian.corbut@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0",
     "browser-sync": "^2.18.12"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server localhost -p 8080"
   }
 }
