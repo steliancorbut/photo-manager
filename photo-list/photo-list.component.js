@@ -32,7 +32,7 @@ angular.
         "body": "Not OK",
         "author": "john.dean2@example.org"
         }]
-      }
+      };
 
       self.hideform = true;
       self.showPhotoForm = function(){
