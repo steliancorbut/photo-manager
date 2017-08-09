@@ -29,14 +29,19 @@
         "stars": 4,
         "body": "Any photo with sky2 and sea2 is for me!",
         "author": "angela.pock@example.org"
-      }]
+        }]
     }, 
     {
         "photoId": 3,
         "photodate": 2014, 
         "imageUrl": "img/photos/super-happy-familly.jpg", 
         "location": "Black Sea, 2014", 
-        "tags": "Super Happy Familly"
+        "tags": "Super Happy Familly",
+        "reviews": [{
+        "stars": 1,
+        "body": "Not OK",
+        "author": "john.dean2@example.org"
+        }]
     }, 
     {
         "photoId": 4,
@@ -52,27 +57,42 @@
         "stars": 4,
         "body": "Any photo with sky5 and sea5 is for me!",
         "author": "marius2ok@example.org"
-      }]
+        }]
     }, 
     {
         "photoId": 5,
         "photodate": 2014, 
         "imageUrl": "img/photos/family-taking-selfie.jpg", 
         "location": "Back Home, happy family taking selfie, 2014", 
-        "tags": "Happy family, selfie "
+        "tags": "Happy family, selfie ",
+        "reviews": [{
+        "stars": 2,
+        "body": "Not OK, only 2 stars",
+        "author": "john.dean5@example.org"
+        }]
     }, 
     {
         "photoId": 6,
         "photodate": 2013, 
         "imageUrl": "img/photos/grandfather-2013.jpg", 
         "location": "Back Home, With Grandfather, 2013", 
-        "tags": "Super happy family with grandfather"
+        "tags": "Super happy family with grandfather",
+        "reviews": [{
+        "stars": 3,
+        "body": "I like it but is Not OK",
+        "author": "john.dean6@example.org"
+        }]
     }, 
     {
         "photoId": 7,
         "photodate": 2012, 
         "imageUrl": "img/photos/grandmother-2012.jpg", 
         "location": "Back Home, with Grandmother, 2012", 
-        "tags": "Super happy family with grandmother"
+        "tags": "Super happy family with grandmother",
+        "reviews": [{
+        "stars": 1,
+        "body": "Not OK",
+        "author": "john.dean2@example.org"
+        }]
     }
 ]

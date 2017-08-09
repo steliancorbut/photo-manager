@@ -13,9 +13,11 @@ angular.
         self.photos = response.data;
       });
 
+      self.review = {};
+      
       self.addReview = function(photo) {
-      photo.reviews.push(this.review);
-      this.review = {};
+      photo.reviews.push(self.review);
+      self.review = {};
       };
 
     }]
