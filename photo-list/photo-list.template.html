@@ -1,32 +1,32 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-2">
+    <aside class="col-md-2">
       
       <!--Sidebar search and sort -->
-      <div class="form-group input-group">
+      <section class="form-group input-group">
         <!-- input text field to filter the search -->
         <input type="text" class="form-control" ng-model="$ctrl.query" placeholder="Search for..">
           <span class="input-group-btn">
               <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
           </span>
-      </div>
-      <div class="form-group">
+      </section>
+      <section class="form-group">
         <!-- select field to permit order by -->
         <p class="help-block">Sort by:</p>
         <select ng-model="$ctrl.orderProp" class="form-control">
            <option value="location">Location</option>
            <option value="photodate">Date</option>
         </select>
-      </div>
-      <div class="form-group input-group">
+      </section>
+      <section class="form-group input-group">
         <!-- button to show the form -->
         <button class="btn btn-default" type="button" ng-click="$ctrl.showPhotoForm()"><i class="fa fa-cloud-upload"></i> Add photo</button>
-      </div>
-    </div>
+      </section>
+    </aside>
     <!-- End Sidebar search and sort -->
 
     <!-- Photo list content -->
-    <div class="col-md-10">
+    <main class="col-md-10">
         <!-- form to upload photo, initialy hide -->
         <form id="formAddPhoto" ng-hide="$ctrl.hideform" ng-submit="$ctrl.addPhoto()">
           <fieldset>
@@ -63,7 +63,7 @@
         </form>
 
         <!-- list the photo collection filtred and ordered -->
-        <div class="media" ng-repeat="photo in $ctrl.photos | filter:$ctrl.query | orderBy:$ctrl.orderProp" >
+        <section class="media" ng-repeat="photo in $ctrl.photos | filter:$ctrl.query | orderBy:$ctrl.orderProp" >
           <div class="media-left">
             <a href="{{photo.imageUrl}}" >
               <img ng-src="{{photo.imageUrl}}" class="thumb-gallery" alt="{{photo.location}}" />
@@ -107,9 +107,9 @@
                 </form>
             </div>
           </div> <!-- end media body -->
-        </div> <!-- end media -->
+        </section> <!-- end media -->
 
-    </div> 
+    </main> 
     <!-- End Photo list content col-md-10 -->
   
   </div> <!-- end row -->

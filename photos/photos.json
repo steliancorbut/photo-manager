@@ -36,10 +36,10 @@
     {
         "photoId": 3,
         "photodate": 2014, 
-        "imageUrl": "img/photos/super-happy-familly.jpg", 
-        "location": "Black Sea", 
-        "tags": "Super Happy Familly",
-        "description": "Black Sea, 2014 - and a long description",
+        "imageUrl": "img/photos/dog.jpg", 
+        "location": "Fagaras Mountain", 
+        "tags": "my dog",
+        "description": "My dog, 2014 - and a long description",
         "reviews": [{
         "stars": 1,
         "body": "Not OK",

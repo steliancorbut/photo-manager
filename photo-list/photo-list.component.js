@@ -17,7 +17,7 @@ angular.
       self.newPhoto = {
         "photoId": 3,
         "photodate": 2014, 
-        "imageUrl": "img/photos/super-happy-familly.jpg", 
+        "imageUrl": "img/photos/dog.jpg", 
         "location": "enter location", 
         "tags": "enter tags",
         "description": "enter a long description",

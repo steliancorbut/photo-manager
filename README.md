@@ -1,6 +1,7 @@
 # photo-manager
-An user interface for a small photo manager app - test development task - Angularjs
-Demo at: http://timisoara-medical.ro/photo-app/
+An user interface for a small photo manager app - test development task - Angularjs.
+
+Live demo at: http://timisoara-medical.ro/photo-app/
 
 ## Prerequisites & Install local
 ### Git or download the zip achive 
