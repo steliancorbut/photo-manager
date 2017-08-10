@@ -4,12 +4,14 @@
       
       <!--Sidebar search and sort -->
       <div class="form-group input-group">
+        <!-- input text field to filter the search -->
         <input type="text" class="form-control" ng-model="$ctrl.query" placeholder="Search for..">
           <span class="input-group-btn">
               <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
           </span>
       </div>
       <div class="form-group">
+        <!-- select field to permit order by -->
         <p class="help-block">Sort by:</p>
         <select ng-model="$ctrl.orderProp" class="form-control">
            <option value="location">Location</option>
@@ -17,6 +19,7 @@
         </select>
       </div>
       <div class="form-group input-group">
+        <!-- button to show the form -->
         <button class="btn btn-default" type="button" ng-click="$ctrl.showPhotoForm()"><i class="fa fa-cloud-upload"></i> Add photo</button>
       </div>
     </div>
@@ -24,36 +27,42 @@
 
     <!-- Photo list content -->
     <div class="col-md-10">
+        <!-- form to upload photo, initialy hide -->
         <form id="formAddPhoto" ng-hide="$ctrl.hideform" ng-submit="$ctrl.addPhoto()">
           <fieldset>
-              <div class="form-group">
+              <div class="form-group col-sm-12">
                  <input type="file" ng-model="$ctrl.newPhoto.imageUrl" id="photofile">
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-9">
                 <label for="photolocation">Location:</label>
-                <input class="form-control" ng-model="$ctrl.newPhoto.location" placeholder="enter location" id="photolocation" type="text" value="" >
+                <input class="form-control " ng-model="$ctrl.newPhoto.location" placeholder="enter location" 
+                  id="photolocation" type="text" required >
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-3">
                 <label for="photodate">Date:</label>
-                <input class="form-control" ng-model="$ctrl.newPhoto.photodate" placeholder="enter date" id="photodate" type="text" value="">
+                <input class="form-control" ng-model="$ctrl.newPhoto.photodate" placeholder="enter date" 
+                  id="photodate" type="text" required>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-12">
                 <label for="phototags">Tags:</label>
-                <input class="form-control" ng-model="$ctrl.newPhoto.tags" placeholder="enter tags" id="phototags" type="text" value="">
+                <input class="form-control" ng-model="$ctrl.newPhoto.tags" placeholder="enter tags" 
+                  id="phototags" type="text" required>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-12">
                   <label for="photodescription">Description:</label>
-                  <textarea ng-model="$ctrl.newPhoto.description" id="photodescription" class="form-control" rows="3"></textarea>
+                  <textarea ng-model="$ctrl.newPhoto.description" id="photodescription" 
+                    class="form-control" rows="3" required></textarea>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-2 col-sm-offset-1">
+                   <button type="reset" class="btn btn-default btn-block">Reset</button>
+               </div>
+              <div class="form-group col-sm-9">
                    <button type="submit" class="btn btn-lg btn-success btn-block">Submit</button>
               </div>
-              <div class="form-group">
-                   <button type="reset" class="btn btn-default">Reset</button>
-               </div>
           </fieldset>   
         </form>
 
+        <!-- list the photo collection filtred and ordered -->
         <div class="media" ng-repeat="photo in $ctrl.photos | filter:$ctrl.query | orderBy:$ctrl.orderProp" >
           <div class="media-left">
             <a href="{{photo.imageUrl}}" >
@@ -63,7 +72,7 @@
           <div class="media-body">
             <p>Description: {{photo.description}}</p>
             <p>Location: {{photo.location}}</p>
-            <p>Tags:{{photo.tags}}</p>
+            <p>Tags: {{photo.tags}}</p>
             
             <!--  Photo Reviews List -->
             <p>Reviews:</p>
@@ -74,27 +83,26 @@
                     Author: {{review.author}}</p>
                 </li>
             </ul>
-            <button type="button" class="btn btn-info pull-right" data-toggle="collapse" data-target="#rev{{photo.photoId}}">
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#rev{{photo.photoId}}">
                 <span class="glyphicon glyphicon-pencil"></span> Review it</button>
             
             <div id="rev{{photo.photoId}}" class="collapse">
                 <!--  Review Form -->
                 <form name="reviewForm{{photo.photoId}}" ng-submit="$ctrl.addReview(photo)">
-                  <br>
                   <h5>Submit a Review</h5>
-                  <fieldset class="form-group">
+                  <fieldset class="form-group col-sm-5">
                     <select ng-model="$ctrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
                       <option value>Rate the photo</option>
                     </select>
                   </fieldset>
-                  <fieldset class="form-group">
-                    <textarea ng-model="$ctrl.review.body" class="form-control" placeholder="Write a short review of the photo..." title="Review"></textarea>
-                  </fieldset>
-                  <fieldset class="form-group">
+                  <fieldset class="form-group col-sm-7">
                     <input ng-model="$ctrl.review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
                   </fieldset>
-                  <fieldset class="form-group">
-                    <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+                  <fieldset class="form-group col-sm-12">
+                    <textarea ng-model="$ctrl.review.body" class="form-control" placeholder="Write a short review of the photo..." title="Review"></textarea>
+                  </fieldset>
+                  <fieldset class="form-group col-sm-2 col-sm-offset-9">
+                    <input type="submit" class="btn btn-primary " value="Submit Review" />
                   </fieldset>
                 </form>
             </div>
@@ -102,7 +110,7 @@
         </div> <!-- end media -->
 
     </div> 
-    <!-- End Photo list content -->
+    <!-- End Photo list content col-md-10 -->
   
   </div> <!-- end row -->
 

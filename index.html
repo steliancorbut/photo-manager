@@ -19,12 +19,9 @@
    <script src="photo-list/photo-list.module.js"></script>
    <script src="photo-list/photo-list.component.js"></script>
 
-   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
 </head>
 <body>
+  <!-- navbar with logo and menu options -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -43,11 +40,15 @@
       </ul>
     </div>
   </nav>
-
-  <div ng-app="photoApp">  
-  <!-- Use a custom component to render a list of photos -->    
+  
+  <!-- Use a custom component to render a list of photos -->
+  <div ng-app="photoApp">      
      <photo-list></photo-list> 
   </div>
+
+  <!-- for Boostrap -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

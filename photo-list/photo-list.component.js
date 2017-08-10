@@ -12,14 +12,8 @@ angular.
       $http.get('photos/photos.json').then(function(response) {
         self.photos = response.data;
       });
-
-      self.review = {};
       
-      self.addReview = function(photo) {
-      photo.reviews.push(self.review);
-      self.review = {};
-      };
-
+      // used by the form who upload a photo
       self.newPhoto = {
         "photoId": 3,
         "photodate": 2014, 
@@ -33,12 +27,24 @@ angular.
         "author": "john.dean2@example.org"
         }]
       };
+      
+      self.review = {};
+
+      // add a review to a photo - method
+      self.addReview = function(photo) {
+      photo.reviews.push(self.review);
+      self.review = {};
+      };
+
 
       self.hideform = true;
+
+      // show the form used to upload a photo - method
       self.showPhotoForm = function(){
         self.hideform = false;
       };
 
+      // add a photo to photos array - action for form formAddPhoto
       self.addPhoto = function(){
         self.newPhoto.photoId = 33;
         self.newPhoto.reviews = [{
