@@ -3,8 +3,9 @@
         "photoId": 1,
         "photodate": 2012, 
         "imageUrl": "img/photos/holiday-sri_lanka.jpg", 
-        "location": "Sri Lanka sea, 2012", 
+        "location": "Sri Lanka", 
         "tags": "Sri Lanka holiday - on the beach, summer 2012",
+        "description": "Sri Lanka sea, 2012 - and a long description",
         "reviews": [{
         "stars": 3,
         "body": "I think this photo is OK, could honestly use more shine.",
@@ -19,8 +20,9 @@
         "photoId": 2,
         "photodate": 2013, 
         "imageUrl": "img/photos/holiday-sea.jpg", 
-        "location": "Black Sea, 2013", 
+        "location": "Black Sea", 
         "tags": "Holiday at Black Sea - on the beach, summer 2013",
+        "description": "Black Sea, 2013 - and a long description",
         "reviews": [{
         "stars": 3,
         "body": "I think this photo was OK",
@@ -29,21 +31,28 @@
         "stars": 4,
         "body": "Any photo with sky2 and sea2 is for me!",
         "author": "angela.pock@example.org"
-      }]
+        }]
     }, 
     {
         "photoId": 3,
         "photodate": 2014, 
         "imageUrl": "img/photos/super-happy-familly.jpg", 
-        "location": "Black Sea, 2014", 
-        "tags": "Super Happy Familly"
+        "location": "Black Sea", 
+        "tags": "Super Happy Familly",
+        "description": "Black Sea, 2014 - and a long description",
+        "reviews": [{
+        "stars": 1,
+        "body": "Not OK",
+        "author": "john.dean2@example.org"
+        }]
     }, 
     {
         "photoId": 4,
         "photodate": 2014, 
         "imageUrl": "img/photos/the-most-super-happy-familly.jpg", 
-        "location": "Black Sea, 2014", 
+        "location": "Black Sea", 
         "tags": "The most super happy familly",
+        "description": "Black Sea, 2014 - and a long description",
         "reviews": [{
         "stars": 5,
         "body": "I think this photo was OK 5",
@@ -52,27 +61,45 @@
         "stars": 4,
         "body": "Any photo with sky5 and sea5 is for me!",
         "author": "marius2ok@example.org"
-      }]
+        }]
     }, 
     {
         "photoId": 5,
         "photodate": 2014, 
         "imageUrl": "img/photos/family-taking-selfie.jpg", 
-        "location": "Back Home, happy family taking selfie, 2014", 
-        "tags": "Happy family, selfie "
+        "location": "Grandparents Home", 
+        "description": "Back Home, happy family taking selfie, 2014 - and a long description",
+        "tags": "Happy family, selfie ",
+        "reviews": [{
+        "stars": 2,
+        "body": "Not OK, only 2 stars",
+        "author": "john.dean5@example.org"
+        }]
     }, 
     {
         "photoId": 6,
         "photodate": 2013, 
         "imageUrl": "img/photos/grandfather-2013.jpg", 
-        "location": "Back Home, With Grandfather, 2013", 
-        "tags": "Super happy family with grandfather"
+        "location": "Grandparents Home", 
+        "tags": "Super happy family with grandfather",
+        "description": "Back Home, With Grandfather, 2013 - a long description",
+        "reviews": [{
+        "stars": 3,
+        "body": "I like it but is Not OK",
+        "author": "john.dean6@example.org"
+        }]
     }, 
     {
         "photoId": 7,
         "photodate": 2012, 
         "imageUrl": "img/photos/grandmother-2012.jpg", 
-        "location": "Back Home, with Grandmother, 2012", 
-        "tags": "Super happy family with grandmother"
+        "location": "Grandparents Home", 
+        "tags": "Super happy family with grandmother",
+        "description": "Back Home, with Grandmother, 2012 - a long description",
+        "reviews": [{
+        "stars": 1,
+        "body": "Not OK",
+        "author": "john.dean2@example.org"
+        }]
     }
 ]
